@@ -22,6 +22,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Clases\Tarjeta.py" />
+    <Compile Include="Clases\Persona.py" />
     <Compile Include="CM2.py" />
   </ItemGroup>
   <ItemGroup>
