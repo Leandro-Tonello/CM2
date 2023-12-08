@@ -42,7 +42,10 @@ def generar_archivo():
             # Busquedas desde la celda Nro. Tarjeta CBU
             fila_tarjeta = df[df.eq('Nro. Tarjeta / CBU').any(axis=1)].index[df[df.eq('Nro. Tarjeta / CBU').any(axis=1)].index > fila].min()
             tarjeta1 = df.loc[fila_tarjeta + 1, 1]
-            tarjeta2 = df.loc[fila_tarjeta + 2, 1]
+            try:
+                tarjeta2 = df.loc[fila_tarjeta + 2, 1]  # Accede a la celda que está tres filas debajo de "Tarjeta"
+            except KeyError:
+                tarjeta2 = None 
             try:
                 tarjeta3 = df.loc[fila_tarjeta + 3, 1]  # Accede a la celda que está tres filas debajo de "Tarjeta"
             except KeyError:
