@@ -20,8 +20,8 @@ class Tarjeta:
                     valorAValidar += digito
 
             if valorAValidar % 10 == 0:
-                return "Tarjeta valida."
+                return "Valida."
             else:
-                return "Tarjeta no valida."
+                return "No valida."
 
 
